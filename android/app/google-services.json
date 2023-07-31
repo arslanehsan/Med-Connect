@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "992252609518",
+    "firebase_url": "https://med-connect-stormdeve-default-rtdb.firebaseio.com",
+    "project_id": "med-connect-stormdeve",
+    "storage_bucket": "med-connect-stormdeve.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992252609518:android:5c54eefea996d21051c4ff",
+        "android_client_info": {
+          "package_name": "com.stormdeve.medconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "992252609518-hih77jc44mn798vo41rtce1s3t8bqhrb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAbzPf8lsOcjSbqh5h6jr6lX3Ep9NOepY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "992252609518-hih77jc44mn798vo41rtce1s3t8bqhrb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "992252609518-lue5kd82kra9nqgutq82kvfra80g9kkc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.stormdeve.medconnect"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
