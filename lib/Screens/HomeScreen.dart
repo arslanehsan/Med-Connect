@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:medconnect/FirebaseHelper/FirebaseDatabaseService.dart';
 import 'package:medconnect/Objects/CutomerObject.dart';
+import 'package:medconnect/Screens/Appointment/MyAppointmentsView.dart';
 import 'package:medconnect/Screens/HealthEducation.dart';
 import 'package:medconnect/Screens/SettingsScreen.dart';
 import 'package:medconnect/Screens/SymptomCheckScreen.dart';
@@ -69,7 +70,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ? const SymptomCheckScreen()
                 : bottomNavigationIndex == 2
                     ? HealthEducationListScreen()
-                    : const SettingsScreen(),
+                    : bottomNavigationIndex == 3
+                        ? const MyAppointmentsView()
+                        : const SettingsScreen(),
       ),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
@@ -102,6 +105,12 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Health',
             icon: Icon(
               Icons.healing,
+            ),
+          ),
+          BottomNavigationBarItem(
+            label: 'History',
+            icon: Icon(
+              Icons.history_edu,
             ),
           ),
           BottomNavigationBarItem(

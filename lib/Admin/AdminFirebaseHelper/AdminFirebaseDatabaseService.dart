@@ -1,5 +1,6 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:medconnect/Objects/AppointmentObject.dart';
 import 'package:medconnect/Objects/DoctorObject.dart';
 
 class AdminFirebaseDatabaseService {
@@ -19,6 +20,23 @@ class AdminFirebaseDatabaseService {
     });
     return checkoutsData
       ..sort((a, b) => b.registrationDate!.compareTo(a.registrationDate!));
+  }
+
+  Future<List<Appointment>> getAppointments() async {
+    List<Appointment> appointmentsData = [];
+
+    final dbf = _firebaseDatabase.ref().child('Appointments');
+
+    await dbf.once().then((snapshot) {
+      Map<dynamic, dynamic>? value =
+          snapshot.snapshot.value as Map<dynamic, dynamic>?;
+      if (value != null) {
+        appointmentsData = Appointment.getObjectList(value);
+      }
+    });
+    return appointmentsData
+      ..sort(
+          (a, b) => b.appointmentDateTime!.compareTo(a.appointmentDateTime!));
   }
 
   Future<bool> deleteDoctor({required DoctorObject doctor}) async {

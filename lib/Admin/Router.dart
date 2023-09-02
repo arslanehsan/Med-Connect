@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medconnect/Admin/Appointments/AdminAppointmentsView.dart';
 import 'package:medconnect/Admin/Doctors/AdminAddNewDoctor.dart';
 import 'package:medconnect/Objects/DoctorObject.dart';
 
@@ -10,6 +11,14 @@ class AdminRouterClass {
         context,
         MaterialPageRoute(
           builder: (context) => const AdminDoctorsScreen(),
+        ),
+      );
+
+  adminAppointmentsScreenRoute({required BuildContext context}) =>
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const AdminAppointmentsView(),
         ),
       );
 

@@ -36,6 +36,11 @@ class _AdminHomeScreenState extends State<AdminHomeScreen> {
               AdminRouterClass().adminDoctorsScreenRoute(context: context),
           child: _singleMenue(label: 'Doctors'),
         ),
+        InkWell(
+          onTap: () =>
+              AdminRouterClass().adminAppointmentsScreenRoute(context: context),
+          child: _singleMenue(label: 'Appointments'),
+        ),
       ],
     );
   }
